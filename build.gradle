@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'org.daisy.streamline.example.Main'
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+javadoc.options.encoding = 'UTF-8'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+group = "org.daisy.dotify"
+
+sourceSets {
+	main {
+		java { srcDir 'src' }
+		resources { srcDir 'src' }
+	}
+	test {
+		java { srcDir 'test' }
+		resources { srcDir 'test' }
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url "https://oss.sonatype.org/content/groups/staging" }
+	//mavenLocal()
+}
+
+dependencies {
+	compile 'org.daisy.streamline:streamline-engine:0.3.0'
+	runtime 'org.daisy.dotify:dotify.markdown:1.0.0-SNAPSHOT'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.2.1'
+}
