@@ -10,8 +10,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.daisy.streamline.api.tasks.AnnotatedFile;
-import org.daisy.streamline.api.tasks.DefaultAnnotatedFile;
+import org.daisy.streamline.api.media.AnnotatedFile;
+import org.daisy.streamline.api.media.DefaultAnnotatedFile;
 import org.daisy.streamline.api.tasks.InternalTaskException;
 import org.daisy.streamline.api.tasks.ReadWriteTask;
 import org.w3c.dom.Document;
