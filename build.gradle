@@ -34,6 +34,7 @@ dependencies {
 	runtime 'org.daisy.dotify:dotify.markdown:1.0.0-SNAPSHOT'
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.2.1'
+wrapper {
+	gradleVersion = '4.5.1'
+	distributionType = Wrapper.DistributionType.ALL
 }
