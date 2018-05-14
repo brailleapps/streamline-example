@@ -1,12 +1,14 @@
 package org.daisy.streamline.example;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+import org.daisy.streamline.api.media.DefaultAnnotatedFile;
 import org.daisy.streamline.api.tasks.CompiledTaskSystem;
 import org.daisy.streamline.api.tasks.TaskSystemException;
 import org.daisy.streamline.api.tasks.TaskSystemFactoryException;
@@ -28,7 +30,7 @@ public class Main {
 		try {
 			CompiledTaskSystem cts = TaskSystemFactoryMaker.newInstance().newTaskSystem("md", "txt", "en").compile(Collections.emptyMap());
 			List<RunnerResult> results = new TaskRunner.Builder("Test").build()
-				.runTasks(new File("readme.md"), new File("out.txt"), cts);
+				.runTasks(DefaultAnnotatedFile.with(Paths.get("readme.md")).build(), new File("out.txt"), cts);
 			printOptions(results);
 		} catch (IOException | TaskSystemException | TaskSystemFactoryException e) {
 			Logger logger = Logger.getLogger(Main.class.getCanonicalName());

@@ -24,6 +24,7 @@ class HtmlTask extends ReadWriteTask {
 	}
 
 	@Override
+	@Deprecated
 	public void execute(File input, File output) throws InternalTaskException {
 		execute(new DefaultAnnotatedFile.Builder(input).build(), output);
 	}
@@ -32,9 +33,9 @@ class HtmlTask extends ReadWriteTask {
 	public AnnotatedFile execute(AnnotatedFile input, File output) throws InternalTaskException {
 		try {
 			DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-			Document d = db.parse(input.getFile());
+			Document d = db.parse(input.getPath().toFile());
 			Files.write(output.toPath(), d.getElementsByTagName("body").item(0).getTextContent().getBytes(StandardCharsets.UTF_8));
-			return new DefaultAnnotatedFile.Builder(output).extension("txt").mediaType("text/plain").build();
+			return new DefaultAnnotatedFile.Builder(output.toPath()).extension("txt").mediaType("text/plain").build();
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			throw new InternalTaskException(e);
 		}
