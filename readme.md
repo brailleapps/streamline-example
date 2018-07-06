@@ -1,5 +1,6 @@
 
 [![Type](https://img.shields.io/badge/type-application-blue.svg)](https://github.com/brailleapps/wiki/wiki/Types)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 # streamline-example #
 Provides an example of how to use the Streamline API and Engine.
