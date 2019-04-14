@@ -33,7 +33,7 @@ repositories {
 
 dependencies {
 	compile 'org.daisy.streamline:streamline-engine:1.2.0'
-	runtime 'org.daisy.dotify:dotify.markdown:1.0.0-SNAPSHOT'
+	runtime 'org.daisy.dotify:markdown-to-html:1.0.0-SNAPSHOT'
 }
 
 wrapper {
