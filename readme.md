@@ -1,5 +1,5 @@
 
-[![Type](https://img.shields.io/badge/type-application-blue.svg)](https://github.com/brailleapps/wiki/wiki/Types)
+[![Type](https://img.shields.io/badge/type-application-blue.svg)](https://github.com/ologolo/wiki/wiki/Types)
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 # streamline-example #
@@ -16,4 +16,4 @@ Build with `gradlew build` (Windows) or `./gradlew build` (Mac/Linux)
 - Compatible with SPI only
 
 ## More information ##
-See the [common wiki](https://github.com/brailleapps/wiki/wiki) for more information.
+See the [common wiki](https://github.com/ologolo/wiki/wiki) for more information.
